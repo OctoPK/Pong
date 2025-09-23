@@ -16,13 +16,14 @@ h1 {
     font-size: 16px;
     font-weight: 1;
     color: rgba(4, 70, 96, 0.9);
+    margin-top: 2px;
 }
 
 .pong-canva {
     border: solid 3px rgba(35, 104, 154, 0.79);
     border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin-top: 1px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
@@ -34,10 +35,9 @@ h1 {
     background-color: rgba(63, 185, 213, 0.518);
     border: solid 2px rgba(35, 104, 154, 0.895);
     border-radius: 5px;
-    padding: 1.5%;
+    padding: 7px;
     font-size: 16px;
     color: rgba(14, 94, 151, 0.9);
-    margin-bottom: 5px;
 }
 
 .bt-new-partie:hover {
@@ -53,16 +53,18 @@ h1 {
 .score {
     font-size: 18px;
     color: rgba(20, 75, 95, 0.962);
+    margin-top: 8px;
+    margin-bottom: 10px;
 }
 
 .bt-move-left {
     background-color: rgba(63, 185, 213, 0.518);
     border: solid 2px rgba(35, 104, 154, 0.895);
     border-radius: 100%;
-    padding: 2%;
+    padding: 10px;
     font-size: 24px;
     color: rgba(14, 94, 151, 0.9);
-    margin-right: 10%;
+    margin-right: 50px;
 }
 
 .bt-move-left:hover {
@@ -79,7 +81,7 @@ h1 {
     background-color: rgba(63, 185, 213, 0.518);
     border: solid 2px rgba(35, 104, 154, 0.895);
     border-radius: 100%;
-    padding: 2%;
+    padding: 10px;
     font-size: 24px;
     color: rgba(14, 94, 151, 0.9);
 }
@@ -95,7 +97,7 @@ h1 {
 }
 
 header {
-    height: 10vh;
+    height: 9vh;
 }
 
 section {
@@ -104,7 +106,7 @@ section {
 
 footer {
     height: 4vh;
-    align-content: center;
+    align-content: end;
 }
 
 #footer {
