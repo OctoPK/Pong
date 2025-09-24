@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="pong.css" />
-        <script src="pong.js"></script>
+        <script defer src="pong.js"></script>
         <script src="https://kit.fontawesome.com/90dfeb2375.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -14,12 +14,12 @@
             <h2 id="subtitle">Joue le plus longtemps possible !</h2>
         </header>
         <section>
-            <canvas class="pong-canva"></canvas>
+            <canvas id="pong-canva" height="600" width="300"></canvas>
             <br />
-            <button class="bt-new-partie">Nouvelle partie</button>
-            <p class="score">Score : 0 s</p>
-            <button class="bt-move-left"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="bt-move-right"><i class="fa-solid fa-chevron-right"></i></button>
+            <button id="bt-new-partie">Nouvelle partie</button>
+            <p id="score">Score : 0 s</p>
+            <button id="bt-move-left"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="bt-move-right"><i class="fa-solid fa-chevron-right"></i></button>
         </section>
         <footer>
             <h2 id="footer">Projet individuel - JavaScript</h2>

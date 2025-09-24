@@ -19,19 +19,17 @@ h1 {
     margin-top: 2px;
 }
 
-.pong-canva {
+#pong-canva {
     border: solid 3px rgba(35, 104, 154, 0.79);
     border-radius: 10px;
     margin-top: 1px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
-    height: 600px;
     background-color: rgba(35, 84, 183, 0.19);
 }
 
-.bt-new-partie {
+#bt-new-partie {
     background-color: rgba(63, 185, 213, 0.518);
     border: solid 2px rgba(35, 104, 154, 0.895);
     border-radius: 5px;
@@ -40,24 +38,24 @@ h1 {
     color: rgba(14, 94, 151, 0.9);
 }
 
-.bt-new-partie:hover {
+#bt-new-partie:hover {
     background-color: rgba(35, 103, 118, 0.518);
     border-color: rgba(23, 67, 99, 0.895);
     color: rgba(10, 59, 94, 0.9);
 }
 
-.bt-new-partie:active {
+#bt-new-partie:active {
     background-color: rgba(24, 70, 81, 0.518);
 }
 
-.score {
+#score {
     font-size: 18px;
     color: rgba(20, 75, 95, 0.962);
     margin-top: 8px;
     margin-bottom: 10px;
 }
 
-.bt-move-left {
+#bt-move-left {
     background-color: rgba(63, 185, 213, 0.518);
     border: solid 2px rgba(35, 104, 154, 0.895);
     border-radius: 100%;
@@ -67,17 +65,17 @@ h1 {
     margin-right: 50px;
 }
 
-.bt-move-left:hover {
+#bt-move-left:hover {
     background-color: rgba(35, 103, 118, 0.518);
     border-color: rgba(23, 67, 99, 0.895);
     color: rgba(10, 59, 94, 0.9);
 }
 
-.bt-move-left:active {
+#bt-move-left:active {
     background-color: rgba(24, 70, 81, 0.518);
 }
 
-.bt-move-right {
+#bt-move-right {
     background-color: rgba(63, 185, 213, 0.518);
     border: solid 2px rgba(35, 104, 154, 0.895);
     border-radius: 100%;
@@ -86,13 +84,13 @@ h1 {
     color: rgba(14, 94, 151, 0.9);
 }
 
-.bt-move-right:hover {
+#bt-move-right:hover {
     background-color: rgba(35, 103, 118, 0.518);
     border-color: rgba(23, 67, 99, 0.895);
     color: rgba(10, 59, 94, 0.9);
 }
 
-.bt-move-right:active {
+#bt-move-right:active {
     background-color: rgba(24, 70, 81, 0.518);
 }
 
