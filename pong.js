@@ -11,11 +11,15 @@ let xPaddle = canva.width / 2 - 35;
 let yPaddle = canva.height - 12;
 let xBall = canva.width / 2;
 let yBall = canva.height - 20;
-let speedPaddle = 10;
+let speedPaddle = 4;
 let moveX;
 let moveY;
 let speed = 1.4;
 let gameRunning = 0;
+let leftBtnPressed = false;
+let rightBtnPressed = false;
+let leftPressed = false;
+let rightPressed = false;
 
 bt_new_partie.addEventListener("click", () => {
     cancelAnimationFrame(rafId);
@@ -66,6 +70,7 @@ function loop() {
     ctx.clearRect(0, 0, canva.width, canva.height);
     moveBall();
     updateScore();
+    updatePaddle();
     drawPaddle();
     drawBall();
     rafId = requestAnimationFrame(loop);
@@ -74,15 +79,15 @@ function loop() {
 function moveBall() {
     if (xBall + 6 >= canva.width) {
         moveX = Math.random() * -1;
-        if (speed <= 7) speed *= 1.05;
+        if (speed <= 1.4 * 5) speed *= 1.05;
     }
     if (xBall - 6 <= 0) {
         moveX = Math.random();
-        if (speed <= 7) speed *= 1.05;
+        if (speed <= 1.4 * 5) speed *= 1.05;
     }
     if (yBall - 6 <= 0) {
         moveY = 1;
-        if (speed <= 7) speed *= 1.05;
+        if (speed <= 1.4 * 5) speed *= 1.05;
     }
     if (yBall + 6 >= canva.height) {
         gameRunning = 0;
@@ -93,7 +98,7 @@ function moveBall() {
         moveY = -1;
         if (moveX > 0) moveX = Math.random();
         else moveX = Math.random() * -1;
-        if (speed <= 7) speed *= 1.05;
+        if (speed <= 1.4 * 5) speed *= 1.05;
     }
     xBall += moveX * speed;
     yBall += moveY * speed;
@@ -106,25 +111,6 @@ function movePaddleLeft() {
 function movePaddleRight() {
     if (xPaddle + 70 < canva.width) xPaddle += speedPaddle;
 }
-
-bt_move_left.addEventListener("click", () => {
-    movePaddleLeft();
-});
-bt_move_right.addEventListener("click", () => {
-    movePaddleRight();
-});
-document.addEventListener("keydown", (e) => {
-    switch (e.key) {
-        case "ArrowLeft":
-            movePaddleLeft();
-            break;
-        case "ArrowRight":
-            movePaddleRight();
-            break;
-        default:
-            break;
-    }
-});
 
 drawBall();
 drawPaddle();
@@ -143,3 +129,26 @@ function gameOver() {
     drawBall();
     drawPaddle();
 }
+
+function updatePaddle() {
+    if (leftBtnPressed || leftPressed) movePaddleLeft();
+    if (rightBtnPressed || rightPressed) movePaddleRight();
+}
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") leftPressed = true;
+    if (e.key === "ArrowRight") rightPressed = true;
+});
+
+document.addEventListener("keyup", (e) => {
+    if (e.key === "ArrowLeft") leftPressed = false;
+    if (e.key === "ArrowRight") rightPressed = false;
+});
+
+bt_move_left.addEventListener("mousedown", () => (leftBtnPressed = true));
+bt_move_left.addEventListener("mouseup", () => (leftBtnPressed = false));
+bt_move_left.addEventListener("mouseleave", () => (leftBtnPressed = false));
+
+bt_move_right.addEventListener("mousedown", () => (rightBtnPressed = true));
+bt_move_right.addEventListener("mouseup", () => (rightBtnPressed = false));
+bt_move_right.addEventListener("mouseleave", () => (rightBtnPressed = false));
