@@ -148,7 +148,31 @@ document.addEventListener("keyup", (e) => {
 bt_move_left.addEventListener("mousedown", () => (leftBtnPressed = true));
 bt_move_left.addEventListener("mouseup", () => (leftBtnPressed = false));
 bt_move_left.addEventListener("mouseleave", () => (leftBtnPressed = false));
+bt_move_left.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    leftBtnPressed = true;
+});
+bt_move_left.addEventListener("touchend", (e) => {
+    e.preventDefault();
+    leftBtnPressed = false;
+});
+bt_move_left.addEventListener("touchcancel", (e) => {
+    e.preventDefault();
+    leftBtnPressed = false;
+});
 
 bt_move_right.addEventListener("mousedown", () => (rightBtnPressed = true));
 bt_move_right.addEventListener("mouseup", () => (rightBtnPressed = false));
 bt_move_right.addEventListener("mouseleave", () => (rightBtnPressed = false));
+bt_move_right.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    rightBtnPressed = true;
+});
+bt_move_right.addEventListener("touchend", (e) => {
+    e.preventDefault();
+    rightBtnPressed = false;
+});
+bt_move_right.addEventListener("touchcancel", (e) => {
+    e.preventDefault();
+    rightBtnPressed = false;
+});
