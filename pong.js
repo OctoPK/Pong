@@ -128,6 +128,11 @@ function gameOver() {
     ctx.clearRect(0, 0, canva.width, canva.height);
     drawBall();
     drawPaddle();
+    ctx.fillStyle = "red";
+    ctx.font = "40px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("GAME OVER", canva.width / 2, canva.height / 2);
 }
 
 function updatePaddle() {
