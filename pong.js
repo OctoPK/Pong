@@ -57,13 +57,24 @@ loop();
 document.addEventListener("keydown", (e) => {
     switch (e.key) {
         case "ArrowLeft":
-            if (xPaddle > 0) xPaddle -= speedPaddle;
+            movePaddleLeft();
             break;
         case "ArrowRight":
-            if (xPaddle + 70 < canva.width) xPaddle += speedPaddle;
+            movePaddleRight();
             break;
         default:
             break;
     }
     drawPaddle();
 });
+
+function movePaddleLeft() {
+    if (xPaddle > 0) xPaddle -= speedPaddle;
+}
+
+function movePaddleRight() {
+    if (xPaddle + 70 < canva.width) xPaddle += speedPaddle;
+}
+
+bt_move_left.addEventListener("click", movePaddleLeft());
+bt_move_right.addEventListener("click", movePaddleRight());
